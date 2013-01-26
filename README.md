@@ -1,7 +1,7 @@
 Crazy Unscramble
 ================================
 
-Unscramble photos when browsing Crazy Blind Date
+Unscramble photos when browsing Crazy Blind Date.
 
 
 Contribute
