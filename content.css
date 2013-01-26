@@ -4,6 +4,29 @@
   position: relative;
 }
 
+.unscramble-header{
+  color: white;
+  background-color: #fd88bd;
+  padding: 3px;
+  text-align: center;
+  font-size: 15px;
+  height: 20px;
+  margin: 0;
+}
+.unscramble-small{
+  color: white;
+  background-color: #fd88bd;
+  padding: 3px;
+  text-align: center;
+  font-size: 12px;
+  height: 20px;
+  margin: 0;
+}
+
+.unscramble-clicked{
+  border: 2px solid #ff00ff;
+}
+
 .unscramble-tile {
     width: 60px;
     height: 60px;
@@ -11,6 +34,7 @@
     position: absolute;
 }
 .unscramble-tile img {
+    cursor: pointer;
     position: absolute;
     max-width: none;
     width: auto;
