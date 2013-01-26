@@ -1,5 +1,10 @@
 $(document).ready(function() {
+  $('#instadates').prepend("<div id='unscramble-header'>You are using the Crazy Unscrambler Chrome Extension!</div><div class='unscramble-small'>Functionality is Loading...</div>");
   var puzzleHtml = chrome.extension.getURL('puzzle.html');
+
+  changeHeaderText = function(text){
+    $('.unscramble-small').text(text);
+  }
 
   intialSetupPuzzle = function(puzzleBox, imageUrl){
     tiles = $(puzzleBox).find('img');
@@ -40,18 +45,22 @@ $(document).ready(function() {
       return;
     }
 
-    $('#instadates').prepend("<div class='unscramble-header'>You are using the Crazy Unscrambler Chrome Extension!</div><div class='unscramble-small'>Click a picture tile, and then another to swap them. Now you can start unscrambling some crazies!</div>");
-    clearInterval(refreshIntervalId);
-
     $(".instadate .thumbnail img").each(function(i,pic){
+      if($(pic).parent().hasClass('unscramble-tile'))
+        return true;
       var imageUrl = $(pic).attr('src');
       $(pic).parent().load(puzzleHtml, function(){
         intialSetupPuzzle(this, imageUrl);
-
         tileSwapClick(this);
       });
     });
+
+    changeHeaderText('Click a picture tile, and then another to swap them. Now you can start unscrambling some crazies!')
   };
 
-  var refreshIntervalId = setInterval(makeIntoPuzzles, 1000);
+  setTimeout(makeIntoPuzzles, 2000);
+  $('#instadate_availabledates').click(function(){
+    changeHeaderText('Functionality is Loading...')
+    setTimeout(makeIntoPuzzles, 2000);
+  });
 });
