@@ -58,9 +58,9 @@ $(document).ready(function() {
     changeHeaderText('Click a picture tile, and then another to swap them. Now you can start unscrambling some crazies!')
   };
 
-  setTimeout(makeIntoPuzzles, 2000);
+  setTimeout(makeIntoPuzzles, 3000);
   $('#instadate_availabledates').click(function(){
     changeHeaderText('Functionality is Loading...')
-    setTimeout(makeIntoPuzzles, 2000);
+    setTimeout(makeIntoPuzzles, 3000);
   });
 });
