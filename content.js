@@ -13,6 +13,7 @@ $(document).ready(function() {
       parentPosition = $(this).parent().position();
       $(this).css('top', parentPosition.top * -1  + 'px');
       $(this).css('left', parentPosition.left * -1  + 'px');
+      $(this).css('width', 'auto');
     });
   }
 
