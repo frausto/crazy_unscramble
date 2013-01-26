@@ -1,0 +1,82 @@
+.unscramble-puzzle{
+  width: 240px;
+  height: 240px;
+  position: relative;
+}
+
+.unscramble-tile {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+}
+.unscramble-tile img {
+    position: absolute;
+    max-width: none;
+    width: auto;
+    height: auto;
+}
+.unscramble-tile1 {
+    left: 0px;
+    top: 0px;
+}
+.unscramble-tile2 {
+    left: 60px;
+    top: 0px;
+}
+.unscramble-tile3 {
+    left: 120px;
+    top: 0px;
+}
+.unscramble-tile4 {
+    left: 180px;
+    top: 0px;
+}
+.unscramble-tile5 {
+    top: 60px;
+    left: 0px;
+}
+.unscramble-tile6 {
+    top: 60px;
+    left: 60px;
+}
+.unscramble-tile7 {
+    top: 60px;
+    left: 120px;
+}
+.unscramble-tile8 {
+    top: 60px;
+    left: 180px;
+}
+.unscramble-tile9 {
+    top: 120px;
+    left: 0px;
+}
+.unscramble-tile10 {
+    top: 120px;
+    left: 60px;
+}
+.unscramble-tile11 {
+    top: 120px;
+    left: 120px;
+}
+.unscramble-tile12 {
+    top: 120px;
+    left: 180px;
+}
+.unscramble-tile13 {
+    top: 180px;
+    left: 0px;
+}
+.unscramble-tile14 {
+    top: 180px;
+    left: 60px;
+}
+.unscramble-tile15 {
+    top: 180px;
+    left: 120px;
+}
+.unscramble-tile16 {
+    top: 180px;
+    left: 180px;
+}
