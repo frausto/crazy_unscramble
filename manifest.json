@@ -1,0 +1,26 @@
+{
+  "name": "Crazy Unscramble",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Unscramble photos when browsing Crazy Blind Date",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  
+  "background": { "scripts": ["background.js"] },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*okcupid.com/crazyblinddate/*", "https://*okcupid.com/crazyblinddate/*"],
+      "css": ["content.css"],
+      "js": ["jquery-1.8.2.min.js", "content.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_icon": {
+      "38": "icon.png"
+    },
+    "default_title": "Crazy Unscramble"
+  }
+}
