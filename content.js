@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  $('#instadates').prepend("<div id='unscramble-header'>You are using the Crazy Unscrambler Chrome Extension!</div><div class='unscramble-small'>Functionality is Loading...</div>");
+  var header = "<div id='unscramble-header'>You are using the Crazy Unscrambler Chrome Extension!</div><div class='unscramble-small'>Functionality is Loading...</div>"
+  $('#daterequests').prepend(header);
   var puzzleHtml = chrome.extension.getURL('puzzle.html');
 
   changeHeaderText = function(text){
@@ -42,11 +43,11 @@ $(document).ready(function() {
   }
 
   makeIntoPuzzles = function(){
-    if ($(".instadate .thumbnail img").length < 1){
+    if ($(".cbdbox .thumbnail img").length < 1){
       return;
     }
 
-    $(".instadate .thumbnail img").each(function(i,pic){
+    $(".cbdbox .thumbnail img").each(function(i,pic){
       if($(pic).parent().hasClass('unscramble-tile'))
         return true;
       var imageUrl = $(pic).attr('src');
